@@ -91,7 +91,7 @@ using Models;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\Bent\RiderProjects\DNPDNPAssignment2\WebClient\Pages\AddAdult.razor"
-using FileData;
+using WebClient.Data;
 
 #line default
 #line hidden
@@ -118,9 +118,9 @@ using FileData;
     private Adult newAdult = new Adult();
     private string street = "";
 
-    private void AddNewAdult()
+    private async void AddNewAdult()
     {
-        _familyData.AddAdult(newAdult, street);
+        await _familyData.AddAdult(newAdult, street);
         NavigationManager.NavigateTo("/Families");
     }
 

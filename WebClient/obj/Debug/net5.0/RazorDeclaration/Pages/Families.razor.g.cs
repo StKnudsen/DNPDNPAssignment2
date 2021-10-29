@@ -91,7 +91,7 @@ using Models;
 #nullable disable
 #nullable restore
 #line 3 "C:\Users\Bent\RiderProjects\DNPDNPAssignment2\WebClient\Pages\Families.razor"
-using FileData;
+using WebClient.Data;
 
 #line default
 #line hidden

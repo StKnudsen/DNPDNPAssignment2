@@ -1,7 +1,7 @@
 ﻿@page "/AddAdult"
 @attribute [Authorize(Policy = "authorized")]
 @using Models
-@using FileData
+@using WebClient.Data
 
 @inject IFamilyData _familyData
 @inject NavigationManager NavigationManager;
@@ -95,9 +95,9 @@
     private Adult newAdult = new Adult();
     private string street = "";
 
-    private void AddNewAdult()
+    private async void AddNewAdult()
     {
-        _familyData.AddAdult(newAdult, street);
+        await _familyData.AddAdult(newAdult, street);
         NavigationManager.NavigateTo("/Families");
     }
 

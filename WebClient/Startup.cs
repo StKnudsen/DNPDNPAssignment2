@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using FileData;
 using FileData.Impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
@@ -11,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebClient.Authentication;
 using FileData.Data;
+using WebClient.Data;
 
 namespace WebClient
 {
@@ -31,7 +31,6 @@ namespace WebClient
             services.AddServerSideBlazor();
             services.AddScoped<IFamilyData, FamilyData>();
             services.AddScoped<AuthenticationStateProvider, CustomAuthenticationStateProvider>();
-            services.AddScoped<IUserService, InMemoryUserService>();
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("authorized",

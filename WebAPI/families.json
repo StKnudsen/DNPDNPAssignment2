@@ -242,6 +242,18 @@
         "Weight": 124.2,
         "Height": 174,
         "Sex": "F"
+      },
+      {
+        "JobTitle": null,
+        "Id": 0,
+        "FirstName": "Line",
+        "LastName": "Linesen",
+        "HairColor": "Lyser\u00F8d",
+        "EyeColor": "Lime",
+        "Age": 5,
+        "Weight": 5,
+        "Height": 5,
+        "Sex": "female"
       }
     ]
   },
@@ -317,6 +329,18 @@
         "Weight": 81.8,
         "Height": 172,
         "Sex": "M"
+      },
+      {
+        "JobTitle": null,
+        "Id": 0,
+        "FirstName": "Tonni",
+        "LastName": "Bonde",
+        "HairColor": "Leverpostej",
+        "EyeColor": "Remoulade",
+        "Age": 50,
+        "Weight": 90,
+        "Height": 190,
+        "Sex": "male"
       }
     ]
   }
