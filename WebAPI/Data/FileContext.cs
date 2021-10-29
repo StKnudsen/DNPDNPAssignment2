@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
 using Models;
@@ -34,9 +35,12 @@ namespace WebAPI.Data
             return Families;
         }
 
-        public void SaveChanges()
+        public async Task SaveChangesAsync(Adult adult, string streetName)
         {
             // storing families
+            Family family = Families.First(f => f.StreetName.Equals(streetName));
+            family.Adults.Add(adult);
+            
             string jsonFamilies = JsonSerializer.Serialize(Families, new JsonSerializerOptions
             {
                 WriteIndented = true

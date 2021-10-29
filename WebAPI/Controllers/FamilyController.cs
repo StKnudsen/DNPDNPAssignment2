@@ -33,5 +33,23 @@ namespace WebAPI.Controllers
                 return StatusCode(500, e.Message);
             }
         }
+
+        [HttpPut]
+        public async Task<ActionResult> AddAdultAsync([FromBody] Adult adult, [FromQuery] string streetName)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            try
+            {
+                await _fileContext.SaveChangesAsync(adult, streetName);
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
     }
 }

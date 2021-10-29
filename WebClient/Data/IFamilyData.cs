@@ -7,7 +7,7 @@ namespace FileData
     public interface IFamilyData
     {
         Task<List<Family>> GetFamilyAsync();
-        void AddAdult(Adult adult, string streetName);
+        Task AddAdult(Adult adult, string streetName);
         //void RemovePerson();
         
         

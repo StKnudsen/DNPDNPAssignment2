@@ -126,7 +126,7 @@ using FileData;
 
     protected override async Task OnInitializedAsync()
     {
-        Families = _familyData.GetFamilyAsync().Result.ToList();
+        Families = await _familyData.GetFamilyAsync();
     }
 
 
