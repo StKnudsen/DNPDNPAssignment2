@@ -112,7 +112,7 @@ using FileData;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 86 "C:\Users\Bent\RiderProjects\DNPDNPAssignment2\WebClient\Pages\AddAdult.razor"
+#line 93 "C:\Users\Bent\RiderProjects\DNPDNPAssignment2\WebClient\Pages\AddAdult.razor"
        
     public List<Family> Families { get; set; }
     private Adult newAdult = new Adult();
