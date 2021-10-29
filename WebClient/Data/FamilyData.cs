@@ -15,6 +15,7 @@ namespace FileData
         public async Task<List<Family>> GetFamilyAsync()
         {
             using HttpClient client = new HttpClient();
+            Console.WriteLine("TEST");
             HttpResponseMessage responseMessage = await client.GetAsync("https://localhost:5001/Family");
             Console.WriteLine("Reached GetFamilyAsync");
 

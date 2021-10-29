@@ -112,7 +112,7 @@ using FileData;
 
     protected override async Task OnInitializedAsync()
     {
-        _Families = _familyData.GetFamilyAsync().Result.ToList();
+        _Families = await _familyData.GetFamilyAsync();
         familiesToShow = _Families;
     }
 
