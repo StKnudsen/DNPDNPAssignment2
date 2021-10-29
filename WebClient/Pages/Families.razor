@@ -1,0 +1,98 @@
+﻿@page "/Families"
+@using Models
+@using FileData
+@inject IFamilyData _familyData
+<h1>Families</h1>
+
+<p>
+    Search:
+    <input type="text" @oninput="(arg) => filter(arg)">
+</p>
+
+@if (familiesToShow == null)
+{
+    <p>Loading.....</p>
+}
+else if (!familiesToShow.Any())
+{
+    <p>No people have been added.</p>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>Street</th>
+            <th>House number</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (Family family in familiesToShow)
+        {
+            <tr>
+                <td>@family.StreetName</td>
+                <td>@family.HouseNumber</td>
+                <td>
+                    @foreach (var person in family.Adults)
+                    {
+                        <span>@person.FirstName @person.LastName</span>
+                        <br/>
+                    }
+                </td>
+                <td>
+                    <button class="btn btn-warning">
+                        <span class="oi oi-pencil"></span>
+                    </button>
+                    <button class="btn btn-danger">
+                        <span class="oi oi-trash"></span>
+                    </button>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+@code {
+    public List<Family> _Families { get; set; }
+    public List<Family> familiesToShow { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        _Families = _familyData.GetFamily().ToList();
+        familiesToShow = _Families;
+    }
+
+    private void filter(ChangeEventArgs args)
+    {
+        if (args.Value != null && args.Value.Equals(""))
+        {
+            familiesToShow = _Families;
+            return;
+        }
+
+        List<Adult> allAdults = new List<Adult>();
+        foreach (Family family in _Families)
+        {
+            allAdults.AddRange(family.Adults);
+        }
+        List<Adult> match = allAdults.Where(
+            adult => adult.FirstName.Contains(args.Value.ToString()) || adult.LastName.Contains(args.Value.ToString())
+            ).ToList();
+
+        familiesToShow = _Families.Where(a =>
+        {
+            foreach (Adult adult in a.Adults)
+            {
+                if (match.Contains(adult))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }).ToList();
+    }
+
+}
