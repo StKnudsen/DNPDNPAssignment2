@@ -2,13 +2,14 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.Json;
+using System.Threading.Tasks;
 using Models;
 
-namespace FileData
+namespace WebAPI.Data
 {
     public class FileContext
     {
-        public IList<Family> Families { get; private set; }
+        private IList<Family> Families;
         // public IList<Adult> FamiliesToShow { get; private set; }
 
         private readonly string familiesFile = "families.json";
@@ -26,6 +27,11 @@ namespace FileData
             {
                 return JsonSerializer.Deserialize<List<T>>(jsonReader.ReadToEnd());
             }
+        }
+
+        public async Task<IList<Family>> GetFamiliesAsync()
+        {
+            return Families;
         }
 
         public void SaveChanges()

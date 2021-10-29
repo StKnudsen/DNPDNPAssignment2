@@ -96,7 +96,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        Families = _familyData.GetFamily().ToList();
+        Families = _familyData.GetFamilyAsync().Result.ToList();
     }
 
 }

@@ -61,7 +61,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        _Families = _familyData.GetFamily().ToList();
+        _Families = _familyData.GetFamilyAsync().Result.ToList();
         familiesToShow = _Families;
     }
 

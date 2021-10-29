@@ -14,5 +14,7 @@ Global
 		{75711CA3-F11D-4588-BB40-65DA8C0D19DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75711CA3-F11D-4588-BB40-65DA8C0D19DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75711CA3-F11D-4588-BB40-65DA8C0D19DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6C749C5-4008-4959-87FB-FE6FE5E306E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C749C5-4008-4959-87FB-FE6FE5E306E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 EndGlobal

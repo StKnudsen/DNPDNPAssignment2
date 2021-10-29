@@ -8,19 +8,19 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\zteph\\.nuget\\packages\\": {}
+    "C:\\Users\\Bent\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\zteph\\RiderProjects\\DNPAssignment2\\WebClient\\WebClient.csproj",
+      "projectUniqueName": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
       "projectName": "WebClient",
-      "projectPath": "C:\\Users\\zteph\\RiderProjects\\DNPAssignment2\\WebClient\\WebClient.csproj",
-      "packagesPath": "C:\\Users\\zteph\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\zteph\\RiderProjects\\DNPAssignment2\\WebClient\\obj\\",
+      "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
+      "packagesPath": "C:\\Users\\Bent\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\zteph\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Bent\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -61,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
