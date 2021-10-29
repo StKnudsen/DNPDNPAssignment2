@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace WebClient.Pages
+namespace LoginComponent
 {
     #line hidden
     using System;
@@ -82,8 +82,15 @@ using WebClient.Shared;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/counter")]
-    public partial class Counter : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 3 "C:\Users\zteph\RiderProjects\DNPAssignment2\WebClient\Pages\Login.razor"
+using WebClient.Authentication;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Login")]
+    public partial class Login : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -91,19 +98,47 @@ using WebClient.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\zteph\RiderProjects\DNPAssignment2\WebClient\Pages\Counter.razor"
+#line 31 "C:\Users\zteph\RiderProjects\DNPAssignment2\WebClient\Pages\Login.razor"
        
-    private int currentCount = 0;
+    private string username;
+    private string password;
+    private string errorMessage;
 
-    private void IncrementCount()
+    private async Task PerformLogin()
     {
-        currentCount++;
+        errorMessage = "";
+        try
+        {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).ValidateLogin(username, password);
+            username = "";
+            password = "";
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e)
+        {
+            errorMessage = e.Message;
+        }
     }
 
+    private async Task PerformLogOut()
+    {
+        errorMessage = "";
+        username = "";
+        password = "";
+        try
+        {
+            ((CustomAuthenticationStateProvider) AuthenticationStateProvider).Logout();
+            NavigationManager.NavigateTo("/");
+        }
+        catch (Exception e) {}
+    }
+    
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private NavigationManager NavigationManager { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private AuthenticationStateProvider AuthenticationStateProvider { get; set; }
     }
 }
 #pragma warning restore 1591

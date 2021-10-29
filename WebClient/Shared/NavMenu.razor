@@ -1,5 +1,5 @@
 ﻿<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">WebClient</a>
+    <a class="navbar-brand" href="">Assignment1</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
@@ -17,10 +17,12 @@
                 <span class="oi oi-list" aria-hidden="true"></span> Family Data
             </NavLink>
         </li>
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="AddAdult" Match="NavLinkMatch.All">
-                <span class="oi oi-plus" aria-hidden="true"></span> Add adult
-            </NavLink>
+        <li  class="nav-item px-3">
+            <AuthorizeView Policy="authorized">
+                <NavLink class="nav-link" href="AddAdult" Match="NavLinkMatch.All">
+                    <span class="oi oi-plus" aria-hidden="true"></span> Add adult
+                </NavLink>
+            </AuthorizeView>
         </li>
     </ul>
 </div>

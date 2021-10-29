@@ -17,6 +17,18 @@
         "Weight": 39.8,
         "Height": 174,
         "Sex": "F"
+      },
+      {
+        "JobTitle": null,
+        "Id": 0,
+        "FirstName": "Stefan",
+        "LastName": "Sm\u00F8lf",
+        "HairColor": "Purple",
+        "EyeColor": "Redish",
+        "Age": 27,
+        "Weight": 25894,
+        "Height": 180,
+        "Sex": "genderFluid"
       }
     ],
     "Children": [],

@@ -1,0 +1,102 @@
+﻿@page "/AddAdult"
+@attribute [Authorize(Policy = "authorized")]
+@using Models
+@using FileData
+
+@inject IFamilyData _familyData
+@inject NavigationManager NavigationManager;
+
+
+<div class="container">
+    <EditForm class="d-flex flex-column justify-content-center col-lg-8 mx-auto" Model="newAdult" OnValidSubmit="@AddNewAdult">
+        <h1>Add adult</h1>
+        <DataAnnotationsValidator/>
+        <ValidationSummary/>
+
+        <div class="form-group">
+            <label for="address">Select address</label>
+            <select @bind="street"  class="form-control" id="address">
+                @foreach (var family in Families)
+                {
+                    <option>
+                        <span value="StreetName">@family.StreetName</span>
+                        @*<span value="HouseNumber">@family.HouseNumber</span>*@
+                    </option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group row">
+            <div class="col-12 col-sm-6">
+                <label for="firstname">Firstname</label>
+                <InputText @bind-Value="newAdult.FirstName" type="text" class="form-control" id="firstname" placeholder="Firstname"/>
+            </div>
+            <div class="col-12 col-sm-6">
+                <label for="lastname">Lastname</label>
+                <InputText @bind-Value="newAdult.LastName" type="text" class="form-control" id="lastname" placeholder="Lastname"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-12 col-sm-6">
+                <label for="hairColour">Hair colour</label>
+                <InputText @bind-Value="newAdult.HairColor" type="text" class="form-control" id="hairColour" placeholder="HairColour"/>
+            </div>
+            <div class="col-12 col-sm-6">
+                <label for="eyeColour">Eye colour</label>
+                <InputText @bind-Value="newAdult.EyeColor" type="text" class="form-control" id="eyeColour" placeholder="EyeColour"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="form-group col-12 col-sm-6">
+                <label for="age">Age</label>
+                <InputNumber @bind-Value="newAdult.Age" type="text" class="form-control" id="age" placeholder="Age"/>
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label for="weight">Weight</label>
+                <InputNumber @bind-Value="newAdult.Weight" type="text" class="form-control" id="weight" placeholder="Weight"/>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="form-group col-12 col-sm-6">
+                <label for="height">Height</label>
+                <InputNumber @bind-Value="newAdult.Height" type="text" class="form-control" id="height" placeholder="Height"/>
+            </div>
+            <div class="form-group col-12 col-sm-6">
+                <label for="sex">Sex</label>
+                <select @bind="newAdult.Sex" class="form-control" id="sex">
+                    <option value="agender">Agender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="nonBinary">Non binary</option>
+                    <option value="transgender">Transgender</option>
+                    <option value="genderFluid">Gender fluid</option>
+                    <option value="genderQueer">Gender queer</option>
+                    <option value="intersex">Intersex</option>
+                </select>
+            </div>
+        </div>
+        <p class="actions">
+            <button class="btn btn-success" type="submit">
+                Add adult
+            </button>
+        </p>
+    </EditForm>
+</div>
+
+@code {
+    public List<Family> Families { get; set; }
+    private Adult newAdult = new Adult();
+    private string street = "";
+
+    private void AddNewAdult()
+    {
+        _familyData.AddAdult(newAdult, street);
+        NavigationManager.NavigateTo("/Families");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        Families = _familyData.GetFamily().ToList();
+    }
+
+}
