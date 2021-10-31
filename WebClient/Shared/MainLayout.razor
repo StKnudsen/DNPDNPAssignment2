@@ -30,7 +30,6 @@
         if (!user.Identity.IsAuthenticated)
         {
             _navigationManager.NavigateTo($"/Login");
-    // NavigationManager.NavigateTo($"/Login?returnUrl={Uri.EscapeDataString(NavigationManager.Uri)}");
         }
     }
 

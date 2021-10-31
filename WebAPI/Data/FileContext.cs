@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -11,15 +10,12 @@ namespace WebAPI.Data
     public class FileContext
     {
         private IList<Family> Families;
-        // public IList<Adult> FamiliesToShow { get; private set; }
 
         private readonly string familiesFile = "families.json";
-        // private readonly string adultsFile = "adults.json";
 
         public FileContext()
         {
             Families = File.Exists(familiesFile) ? ReadData<Family>(familiesFile) : new List<Family>();
-            // FamiliesToShow = File.Exists(adultsFile) ? ReadData<Adult>(adultsFile) : new List<Adult>();
         }
 
         private IList<T> ReadData<T>(string s)
@@ -37,7 +33,6 @@ namespace WebAPI.Data
 
         public async Task SaveChangesAsync(Adult adult, string streetName)
         {
-            // storing families
             Family family = Families.First(f => f.StreetName.Equals(streetName));
             family.Adults.Add(adult);
             
@@ -49,17 +44,6 @@ namespace WebAPI.Data
             {
                 outputFile.Write(jsonFamilies);
             }
-
-            /* storing persons
-            string jsonAdults = JsonSerializer.Serialize(FamiliesToShow, new JsonSerializerOptions
-            {
-                WriteIndented = true
-            });
-            using (StreamWriter outputFile = new StreamWriter(adultsFile, false))
-            {
-                outputFile.Write(jsonAdults);
-            }
-            */
         }
     }
 }

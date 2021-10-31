@@ -8,7 +8,6 @@ namespace WebClient.Data
     {
         Task<List<Family>> GetFamilyAsync();
         Task AddAdult(Adult adult, string streetName);
-        //void RemovePerson();
         
         
     }
