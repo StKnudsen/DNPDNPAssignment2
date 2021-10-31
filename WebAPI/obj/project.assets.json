@@ -193,19 +193,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bent\\.nuget\\packages\\": {}
+    "C:\\Users\\Tina Hadberg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Tina Hadberg\\RiderProjects\\DNPAssignment2\\WebAPI\\WebAPI.csproj",
       "projectName": "WebAPI",
-      "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj",
-      "packagesPath": "C:\\Users\\Bent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\obj\\",
+      "projectPath": "C:\\Users\\Tina Hadberg\\RiderProjects\\DNPAssignment2\\WebAPI\\WebAPI.csproj",
+      "packagesPath": "C:\\Users\\Tina Hadberg\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tina Hadberg\\RiderProjects\\DNPAssignment2\\WebAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bent\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Tina Hadberg\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"

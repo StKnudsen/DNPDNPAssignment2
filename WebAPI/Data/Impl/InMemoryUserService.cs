@@ -7,7 +7,7 @@ using Models;
 
 namespace FileData.Impl
 {
-    public class InMemoryUserService: IUserService
+    public class  InMemoryUserService: IUserService
     {
         private List<User> users;
 

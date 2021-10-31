@@ -7,21 +7,18 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
 using Models;
-using WebClient.Data;
 
 namespace WebClient.Authentication
 {
     public class CustomAuthenticationStateProvider :AuthenticationStateProvider
     {
         private readonly IJSRuntime jsRuntime;
-        //private readonly IUserService userService;
 
         private User cachedUser;
 
         public CustomAuthenticationStateProvider(IJSRuntime jsRuntime)
         {
             this.jsRuntime = jsRuntime;
-            //this.userService = userService;
         }
 
         public override async Task<AuthenticationState> GetAuthenticationStateAsync()
