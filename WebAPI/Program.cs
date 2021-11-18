@@ -38,15 +38,15 @@ namespace WebAPI
         {
             //IList<User> users = new List<User>();
             dbContext.Add(new User()
-                {
-                    Password = "123456",
-                    UserName = "Troels"
-                });
+            {
+                Password = "123456",
+                UserName = "Troels"
+            });
             dbContext.Add(new User()
             {
-                    Password = "Otto2021",
-                    UserName = "Tina"
-                });
+                Password = "Otto2021",
+                UserName = "Tina"
+            });
             //dbContext.Add(users);
             dbContext.SaveChanges();
         }
@@ -60,37 +60,39 @@ namespace WebAPI
 
             foreach (Family family in families)
             {
-                dbContext.Add(new Family
+                await dbContext.Families.AddAsync(new Family
                 {
                     Id = family.Id,
                     HouseNumber = family.HouseNumber,
-                    StreetName = family.StreetName
+                    StreetName = family.StreetName,
+                    Adults = family.Adults
                 });
 
+                await dbContext.SaveChangesAsync();
                 Console.WriteLine(family.StreetName);
 
-                foreach (Adult adult in family.Adults)
-                {
-                    dbContext.Add(new Adult
-                    {
-                        Age = adult.Age,
-                        EyeColor = adult.EyeColor,
-                        FirstName = adult.FirstName,
-                        HairColor = adult.HairColor,
-                        Height = adult.Height,
-                        Id = adult.Id,
-                        LastName = adult.LastName,
-                        Sex = adult.Sex,
-                        Weight = adult.Weight,
-                        Job = adult.Job,
-                        Family = family
-                    });
-
-                    Console.WriteLine("  " + adult.LastName);
-                }
+                // foreach (Adult adult in family.Adults)
+                // {
+                //     dbContext.Add(new Adult
+                //     {
+                //         Age = adult.Age,
+                //         EyeColor = adult.EyeColor,
+                //         FirstName = adult.FirstName,
+                //         HairColor = adult.HairColor,
+                //         Height = adult.Height,
+                //         Id = adult.Id,
+                //         LastName = adult.LastName,
+                //         Sex = adult.Sex,
+                //         Weight = adult.Weight,
+                //         Job = adult.Job,
+                //         Family = family
+                //     });
+                //
+                //     Console.WriteLine("  " + adult.LastName);
+                // }
             }
 
-            dbContext.SaveChanges();
+            //await dbContext.SaveChangesAsync();
         }
     }
 }

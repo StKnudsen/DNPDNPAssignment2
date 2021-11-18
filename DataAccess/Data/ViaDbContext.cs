@@ -16,7 +16,16 @@ namespace DataAccess.Data
             optionsBuilder.UseSqlite(
                 "Data Source = C:/Users/Bent/RiderProjects/DNPDNPAssignment2/dataaccess/Families.db");
         }
-        
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Adult>()
+                .HasOne(a => a.Family)
+                .WithMany(f => f.Adults);
+            modelBuilder.Entity<Adult>()
+                .HasOne(a => a.Job);
+        }
         
     }
 }
