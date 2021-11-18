@@ -2,39 +2,27 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataAccess.Data;
 using FileData.Data;
+using Microsoft.EntityFrameworkCore;
 using Shared.Models;
 
 namespace FileData.Impl
 {
-    public class InMemoryUserService: IUserService
+    public class SqliteUserService : IUserService
     {
-        private List<User> users;
+        private ViaDbContext DbContext;
 
-        public InMemoryUserService()
+        public SqliteUserService(ViaDbContext dbContext)
         {
-            users = new[]
-            {
-                new User()
-                {
-                    Password = "123456",
-                    UserName = "Troels"
-                },
-                new User()
-                {
-                    Password = "Otto2021",
-                    UserName = "Tina"
-                },
-                new User()
-                {
-                Password = "password",
-                UserName = "username"
-                }
-            }.ToList();
+            DbContext = dbContext;
         }
 
         public async Task<User> ValidateUserAsync(string userName, string password)
         {
+            List<User> users = new List<User>();
+            users = await DbContext.Users.ToListAsync();
+            
             User first = users.FirstOrDefault(user => user.UserName.Equals(userName));
             if (first == null)
             {
@@ -47,6 +35,6 @@ namespace FileData.Impl
             }
 
             return first;
-        }   
+        }
     }
 }

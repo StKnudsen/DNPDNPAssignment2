@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using FileData.Data;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using Shared.Models;
 
 namespace WebAPI.Controllers
 {

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Models;
+using Shared.Models;
 using WebAPI.Data;
 
 namespace WebAPI.Controllers
