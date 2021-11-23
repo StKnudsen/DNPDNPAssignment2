@@ -1,5 +1,4 @@
 using System.Security.Claims;
-using FileData.Impl;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Components.Authorization;
@@ -9,7 +8,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WebClient.Authentication;
-using FileData.Data;
 using WebClient.Data;
 
 namespace WebClient

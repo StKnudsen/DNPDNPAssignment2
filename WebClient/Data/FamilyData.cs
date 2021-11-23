@@ -4,7 +4,8 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Models;
+using Shared.Models;
+
 
 namespace WebClient.Data
 {
@@ -26,6 +27,8 @@ namespace WebClient.Data
             {
                 PropertyNamingPolicy = JsonNamingPolicy.CamelCase
             });
+
+            Console.WriteLine("Deserialized families" + families.Count);
 
             return families;
         }

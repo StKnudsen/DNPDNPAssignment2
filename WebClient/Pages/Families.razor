@@ -1,6 +1,6 @@
 ﻿@page "/Families"
-@using Models
 @using WebClient.Data
+@using global::Shared.Models
 @inject IFamilyData _familyData
 <h1>Families</h1>
 
@@ -35,7 +35,7 @@ else
                 <td>@family.StreetName</td>
                 <td>@family.HouseNumber</td>
                 <td>
-                    @foreach (var person in family.Adults)
+                    @foreach (Adult person in family.Adults)
                     {
                         <span>@person.FirstName @person.LastName</span>
                         <br/>

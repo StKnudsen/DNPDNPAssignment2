@@ -4,7 +4,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Mascot",
           "Salary": 99821
         },
@@ -19,7 +19,7 @@
         "Sex": "F"
       },
       {
-        "JobTitle": null,
+        "Job": null,
         "Id": 0,
         "FirstName": "Stefan",
         "LastName": "Sm\u00F8lf",
@@ -37,7 +37,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Front End Web Developer",
           "Salary": 66408
         },
@@ -52,7 +52,7 @@
         "Sex": "F"
       },
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Business Development Manager",
           "Salary": 71456
         },
@@ -73,7 +73,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Skin Care Specialist",
           "Salary": 20545
         },
@@ -88,7 +88,7 @@
         "Sex": "F"
       },
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Vice Principal",
           "Salary": 72901
         },
@@ -103,7 +103,7 @@
         "Sex": "F"
       },
       {
-        "JobTitle": null,
+        "Job": null,
         "Id": 0,
         "FirstName": "Tina",
         "LastName": "Hadberg",
@@ -121,7 +121,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Teacher",
           "Salary": 91588
         },
@@ -136,7 +136,7 @@
         "Sex": "M"
       },
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Service Advisor",
           "Salary": 72532
         },
@@ -157,7 +157,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Janitor",
           "Salary": 61437
         },
@@ -172,7 +172,7 @@
         "Sex": "F"
       },
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Office Clerk",
           "Salary": 41332
         },
@@ -193,7 +193,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Writer",
           "Salary": 63392
         },
@@ -208,7 +208,7 @@
         "Sex": "F"
       },
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Casino Host",
           "Salary": 35445
         },
@@ -229,7 +229,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Nurse",
           "Salary": 36813
         },
@@ -244,7 +244,7 @@
         "Sex": "F"
       },
       {
-        "JobTitle": null,
+        "Job": null,
         "Id": 0,
         "FirstName": "Line",
         "LastName": "Linesen",
@@ -262,7 +262,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Web Administrator",
           "Salary": 44759
         },
@@ -277,7 +277,7 @@
         "Sex": "M"
       },
       {
-        "JobTitle": null,
+        "Job": null,
         "Id": 0,
         "FirstName": "Frederik",
         "LastName": "Rasmussen",
@@ -295,7 +295,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Science Teacher",
           "Salary": 55346
         },
@@ -316,7 +316,7 @@
     "HouseNumber": 1,
     "Adults": [
       {
-        "JobTitle": {
+        "Job": {
           "JobTitle": "Call Center Agent",
           "Salary": 20308
         },
@@ -331,7 +331,7 @@
         "Sex": "M"
       },
       {
-        "JobTitle": null,
+        "Job": null,
         "Id": 0,
         "FirstName": "Tonni",
         "LastName": "Bonde",

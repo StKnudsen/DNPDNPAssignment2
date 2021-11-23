@@ -446,6 +446,10 @@
       "Shared/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.12"
+        },
         "compile": {
           "bin/placeholder/Shared.dll": {}
         },
@@ -458,6 +462,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "DataAccess": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.12",
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.12",
           "Shared": "1.0.0",
           "Swashbuckle.AspNetCore": "5.6.3"
         },
@@ -1174,19 +1180,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Bent\\.nuget\\packages\\": {}
+    "C:\\Users\\LineK\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
+      "projectUniqueName": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
       "projectName": "WebClient",
-      "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
-      "packagesPath": "C:\\Users\\Bent\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\obj\\",
+      "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
+      "packagesPath": "C:\\Users\\LineK\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Bent\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\LineK\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1198,8 +1204,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj": {
-              "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj"
+            "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj": {
+              "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj"
             }
           }
         }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj": {}
+    "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj",
-        "packagesPath": "C:\\Users\\Bent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\obj\\",
+        "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj",
+        "packagesPath": "C:\\Users\\LineK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bent\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\LineK\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -26,8 +26,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj"
+              "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj"
               }
             }
           }
@@ -76,17 +76,17 @@
         }
       }
     },
-    "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj": {
+    "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj",
+        "projectUniqueName": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj",
         "projectName": "Shared",
-        "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj",
-        "packagesPath": "C:\\Users\\Bent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\obj\\",
+        "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\LineK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bent\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\LineK\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -109,6 +109,22 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -128,17 +144,17 @@
         }
       }
     },
-    "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj": {
+    "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj",
+        "projectUniqueName": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj",
         "projectName": "WebAPI",
-        "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj",
-        "packagesPath": "C:\\Users\\Bent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\obj\\",
+        "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj",
+        "packagesPath": "C:\\Users\\LineK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bent\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\LineK\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -150,11 +166,11 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj": {
-                "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj"
+              "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj": {
+                "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\Shared\\Shared.csproj"
               }
             }
           }
@@ -169,6 +185,20 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[5.0.12, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"
@@ -196,17 +226,17 @@
         }
       }
     },
-    "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj": {
+    "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
+        "projectUniqueName": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
         "projectName": "WebClient",
-        "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
-        "packagesPath": "C:\\Users\\Bent\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebClient\\obj\\",
+        "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\WebClient.csproj",
+        "packagesPath": "C:\\Users\\LineK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebClient\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Bent\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\LineK\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -218,8 +248,8 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {
-              "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj": {
-                "projectPath": "C:\\Users\\Bent\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj"
+              "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj": {
+                "projectPath": "C:\\Users\\LineK\\RiderProjects\\DNPDNPAssignment2\\WebAPI\\WebAPI.csproj"
               }
             }
           }

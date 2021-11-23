@@ -6,7 +6,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.JSInterop;
-using Models;
+using Shared.Models;
 using WebClient.Data;
 
 namespace WebClient.Authentication

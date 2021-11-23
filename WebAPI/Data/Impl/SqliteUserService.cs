@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DataAccess.Data;
-using FileData.Data;
 using Microsoft.EntityFrameworkCore;
 using Shared.Models;
 
-namespace FileData.Impl
+namespace WebAPI.Data.Impl
 {
     public class SqliteUserService : IUserService
     {

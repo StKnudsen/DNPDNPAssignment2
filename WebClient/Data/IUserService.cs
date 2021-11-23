@@ -1,4 +1,5 @@
-﻿using Models;
+﻿
+using Shared.Models;
 
 namespace WebClient.Data
 {

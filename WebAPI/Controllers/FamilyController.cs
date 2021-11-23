@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using DataAccess.Data;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Shared.Models;
-using WebAPI.Data;
+
 
 namespace WebAPI.Controllers
 {
@@ -11,21 +14,39 @@ namespace WebAPI.Controllers
     [Route("[controller]")]
     public class FamilyController : ControllerBase
     {
-        private FileContext _fileContext;
+        private ViaDbContext _dbContext;
 
-        public FamilyController(FileContext fileContext)
+        public FamilyController(ViaDbContext dbContext)
         {
-            _fileContext = fileContext;
+            _dbContext = dbContext;
         }
 
         [HttpGet]
+        
         public async Task<ActionResult<IList<Family>>> GetFamiliesAsync()
         {
             try
             {
-                IList<Family> families = await _fileContext.GetFamiliesAsync();
+                IList<Family> families = _dbContext.Families.Include(family => family.Adults).ToList();
                 Console.WriteLine("Reached GetFamiliesAsync");
                 return Ok(families);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                return StatusCode(500, e.Message);
+            }
+        }
+        
+        [HttpGet]
+        [Route("/adults")]
+        public async Task<ActionResult<IList<Adult>>> GetAdultsAsync()
+        {
+            try
+            {
+                IList<Adult> adults = _dbContext.Adults.ToList();
+                Console.WriteLine("Reached GetFamiliesAsync");
+                return Ok(adults);
             }
             catch (Exception e)
             {
@@ -42,7 +63,12 @@ namespace WebAPI.Controllers
 
             try
             {
-                await _fileContext.SaveChangesAsync(adult, streetName);
+                Family family = await _dbContext.Families
+                    .Include(f => f.Adults)
+                    .FirstAsync(f => f.StreetName.Equals(streetName));
+                family.Adults.Add(adult);
+                _dbContext.Update(family);
+                await _dbContext.SaveChangesAsync();
                 return Ok();
             }
             catch (Exception e)

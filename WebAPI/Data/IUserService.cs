@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Shared.Models;
 
-namespace FileData.Data
+namespace WebAPI.Data
 {
     public interface IUserService
     {

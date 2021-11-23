@@ -14,17 +14,17 @@ namespace DataAccess.Data
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlite(
-                "Data Source = C:/Users/Bent/RiderProjects/DNPDNPAssignment2/dataaccess/Families.db");
+                "Data Source =C:/Users/LineK/RiderProjects/DNPDNPAssignment2/DataAccess/Families.db");
         }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Adult>()
+           /* modelBuilder.Entity<Adult>()
                 .HasOne(a => a.Family)
                 .WithMany(f => f.Adults);
             modelBuilder.Entity<Adult>()
-                .HasOne(a => a.Job);
+                .HasOne(a => a.Job);*/
         }
         
     }

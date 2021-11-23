@@ -1,7 +1,8 @@
 ﻿@page "/AddAdult"
 @attribute [Authorize(Policy = "authorized")]
-@using Models
 @using WebClient.Data
+@using Microsoft.AspNetCore.Components
+@using global::Shared.Models
 
 @inject IFamilyData _familyData
 @inject NavigationManager NavigationManager;

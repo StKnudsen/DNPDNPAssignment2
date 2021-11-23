@@ -2,16 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using FileData.Data;
 using Shared.Models;
 
-namespace FileData.Impl
+namespace WebAPI.Data.Impl
 {
     public class InMemoryUserService: IUserService
     {
         private List<User> users;
 
-        public InMemoryUserService()
+      /*  public InMemoryUserService()
         {
             users = new[]
             {
@@ -31,7 +30,7 @@ namespace FileData.Impl
                 UserName = "username"
                 }
             }.ToList();
-        }
+        }*/
 
         public async Task<User> ValidateUserAsync(string userName, string password)
         {
